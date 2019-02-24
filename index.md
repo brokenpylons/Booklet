@@ -21,12 +21,45 @@ program {
 }
 ```
 
-Ta program ima tako en sam korak. Računalnik lahko seveda izvede tudi več korakov. V naslednjem programo imamo tri. 
+Ta program ima tako en sam korak. Računalnik lahko seveda izvede tudi več korakov zaporedoma. V naslednjem primeru bo izvedel kar tri. Najprej bo izpisal ```Korak 1```, nato ```Korak 2``` in za konec še ```Korak 3```. 
 
 ```
+program {
+    print "To je korak 1";
+    print "To je korak 2";
+    print "To je korak 3";
+}
+```
 
-``
+Kot ste opazili je računalnik vsa besedila izpisal kar v eni vrstici. Takšen izpis ne izgleda preveč pregledno. Dajmo vsako besedilo v svojo vrstico! To naredimo tako, da za vsakim besedilom izpišemo še znak za novo vrstico. Tega predstavlja besedica ```line```.
 
+```
+program {
+    print "To je korak 1";
+    print line;
+    print "To je korak 2";
+    print line;
+    print "To je korak 3";
+}
+```
+
+Kot lahko vidite so programi nekakšen kuharski recept za računalnik. Sestavljen je iz večih korakov, ti pa se vedno izvajajo eden za drugim od vrha do dna. Naslednji program izpiše recept za peko palačink!
+
+```
+program {
+    print "Vzami posodo.";
+    print line;
+    print "Dodaj jajca.";
+    print line;
+    print "Dodaj mogo.";
+    print line;
+    print "Dodaj mleko.";
+    print line;
+    print "Maso vlij v ponev.";
+    print line;
+    print "Speči palačinke!";
+}
+```
 
 ## Konstante
 
