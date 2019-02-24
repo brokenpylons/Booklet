@@ -1,8 +1,8 @@
-# Booklet
+# Knjiga
 
-This is a test text.
+Uvod...
 
-## Konzola
+## Struktura programa
 
 ```
 program {
@@ -10,4 +10,22 @@ program {
 }
 ```
 
+## Konstante
 
+
+## Operacije
+
+
+## Spremenljivke
+
+
+## Vhod in izhod
+
+
+## Pogoji
+
+
+## Zanke
+
+
+## Kam naprej?
