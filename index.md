@@ -6,11 +6,27 @@ Programirali bomo v jeziku Limpid, ki je bil posebaj razvit za učenje in ima za
 
 ## Struktura programa
 
+Kaj sploh je programiranje? Programiranje je zapis postopka, ki ga mora računalnik izvesti. Takemu postopku rečemo program. V našem programskem jeziku program zapišemo na naslednji način:
+
 ```
 program {
-    print "Hello World!";
 }
 ```
+
+Ta program predstavlja postopek brez enega samega koraka, zato posledično ne naredi ničesar. To je najpreprostejši program, ki ga lahko zapišemo. Takšen porgram ni preveč uporaben, zato mu dodajmo še kakšen ukaz. Dodali bomo ukaz za izpis na zaslon, ki se imenuje ```print```. Zakaj se imenuje print? Ker so prvi računalniki imeli namesto zalona tiskalnik, računalnik je v tistih časih začel dobesedno "printati", ko je dobil ta ukaz. To ime je torej izbrano zgolj iz konvencije. Zraven ukaza print pa je še besedilo, ki ga bo program izpisal na zaslon. V primeru naslednega programa je to ```Zdravo!```:
+
+```
+program {
+    print "Zdravo!";
+}
+```
+
+Ta program ima tako en sam korak. Računalnik lahko seveda izvede tudi več korakov. V naslednjem programo imamo tri. 
+
+```
+
+``
+
 
 ## Konstante
 
