@@ -106,6 +106,25 @@ program {
 
 ## Spremenljivke
 
+Seveda pa se tudi računalnik naveliča računati istih računov znova in znova, zato lahko rezultat shranimo in ga nato kasneje ponovno uporabimo. Računalnik si števila shrani v spomin. Mesto kamor si je računalnik število shranil moramo nekako označiti, da ga bomo lahko kasneje dobili nazaj. To storimo tako da mu mestu dodelimo ime, lahko je karkoli, vendar je najbolje da izbiramo imena, ki nas spomnijo kaj smo tja shranili. Na primer:
+
+```
+program {
+    x: 1;
+}
+```
+
+Ta program na mesto ```x``` shrani število ```1```. Če program poženemo bomo opazili, da se na videz ni zgodilo nič. Zakaj? Računalniku smo naročili naj samo shrani število v spomin, ta ukaz ne izpiše ničesar na zaslon. Za izpis imamo ukaz ```print```. Če želimo pogledati kaj ima računalnik zapisano na mestu ```x``` lahko to storimo tako, da vrednost preprosto izpišemo na zaslon:
+
+```
+program {
+    x: 1;
+    print x;
+}
+```
+
+Ta progam si najprej števio shrani, nato pa ga izpiše na zaslon. 
+
 
 ## Vhod in izhod
 
