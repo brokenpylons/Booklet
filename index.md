@@ -40,6 +40,7 @@ program {
     print "To je korak 2";
     print line;
     print "To je korak 3";
+    print line;
 }
 ```
 
@@ -51,21 +52,57 @@ program {
     print line;
     print "Dodaj jajca.";
     print line;
-    print "Dodaj mogo.";
+    print "Dodaj moko.";
     print line;
     print "Dodaj mleko.";
     print line;
     print "Maso vlij v ponev.";
     print line;
     print "Speči palačinke!";
+    print line;
 }
 ```
 
-## Konstante
+## Računske operacije
+
+Besedila niso edina stvar, ki jih zna računalnik izpisati. Razume tudi številke. Na primer naslednji izpiše vaše najljubše število:
+
+```
+program {
+    print 7;
+}
+```
+
+Sem uganil? ;) Podprta so samo cela števila. Torej računalnik števila ```1.4``` ne bo razumel. Z števili pa lahko tudi računamo. Na primer računalniku lahko damo za nalogo naj izračuna ```1 + 1```:
+
+```
+program {
+    print 1 + 1;
+}
+```
+
+Odgovor je seveda ```2```. Podprte pa so tudi druge računske operacije. Na voljo imamo seštevanje, odštevanje, deljenje in množenje. 
+
+```
+program {
+    print 1 + 2;
+    print 1 - 2;
+    print 1 * 2;
+    print 1 / 2;
+}
+```
 
 
-## Operacije
+Računalnik je torej kot neke vrste kalukator. Lahko izračuna poljubne račune, za razliko od kalukatorja pa lahko izračuna zaporedoma več računov ne le enega. Opazite lahko, da je računalnik pri zadnjem izračunu vrnil ```0```. Se je morda zmotil? Kot sem že omenil so podprta samo cela števila, zato v primeru kot števili nista deljivi računalnik rezultat zaokroži navzdol. To pomeni da preprosto odstranimo del za decimalno vejico, na primer ```1.3``` se zaokroži na ```1```, ```1.5``` se prav tako zaokroži na ```1```, ```7.6``` se zaokroži na ```7```, ```9.9``` se zaokorži na ```9```. Seveda pa računalnik lahko računa tudi z večjimi števili, brez težav opravi z naslednjimi računi za katere bi mi že potrebovali kalkulator:
 
+```
+program {
+    print 502 + 78;
+    print 78858 - 4485;
+    print 1147 * 99;
+    print 77888 / 222;
+}
+```
 
 ## Spremenljivke
 
