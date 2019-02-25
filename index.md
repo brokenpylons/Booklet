@@ -93,7 +93,7 @@ program {
 ```
 
 
-Računalnik je torej kot neke vrste kalukator. Lahko izračuna poljubne račune, za razliko od kalukatorja pa lahko izračuna zaporedoma več računov ne le enega. Opazite lahko, da je računalnik pri zadnjem izračunu vrnil ```0```. Se je morda zmotil? Kot sem že omenil so podprta samo cela števila, zato v primeru kot števili nista deljivi računalnik rezultat zaokroži navzdol. To pomeni da preprosto odstranimo del za decimalno vejico, na primer ```1.3``` se zaokroži na ```1```, ```1.5``` se prav tako zaokroži na ```1```, ```7.6``` se zaokroži na ```7```, ```9.9``` se zaokorži na ```9```. Seveda pa računalnik lahko računa tudi z večjimi števili, brez težav opravi z naslednjimi računi za katere bi mi že potrebovali kalkulator:
+Računalnik je torej kot neke vrste kalukator. Lahko izračuna poljubne račune, za razliko od kalukatorja pa lahko izračuna zaporedoma več računov ne le enega. Opazite lahko, da je računalnik pri zadnjem izračunu vrnil ```0```. Se je morda zmotil? Kot sem že omenil so podprta samo cela števila, zato v primeru kot števili nista deljivi računalnik rezultat zaokroži navzdol. To pomeni da preprosto odstranimo del za decimalno vejico, na primer ```1.3``` se zaokroži na ```1```, ```1.5``` se prav tako zaokroži na ```1```, ```7.6``` se zaokroži na ```7```, ```9.9``` se zaokorži na ```9```. Seveda pa računalnik lahko računa tudi z večjimi števili. Brez težav opravi z naslednjimi računi za katere bi mi že potrebovali kalkulator:
 
 ```
 program {
