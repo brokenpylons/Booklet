@@ -106,7 +106,7 @@ program {
 
 ## Spremenljivke
 
-Seveda pa se tudi računalnik naveliča računati istih računov znova in znova, zato lahko rezultat shranimo in ga nato kasneje ponovno uporabimo. Računalnik si števila shrani v spomin. Mesto kamor si je računalnik število shranil moramo nekako označiti, da ga bomo lahko kasneje dobili nazaj. To storimo tako da mu mestu dodelimo ime, lahko je karkoli, vendar je najbolje da izbiramo imena, ki nas spomnijo kaj smo tja shranili. Na primer:
+Seveda pa se tudi računalnik naveliča računati istih računov znova in znova, zato lahko rezultat shranimo in ga nato kasneje ponovno uporabimo. Računalnik si števila shrani v spomin. Mesto kamor si je računalnik število shranil moramo nekako označiti, da bomo število lahko kasneje dobili nazaj. To storimo tako da mu mestu dodelimo ime, lahko je karkoli, vendar je najbolje da izbiramo imena, ki nas spomnijo kaj smo tja shranili. Na primer:
 
 ```
 program {
