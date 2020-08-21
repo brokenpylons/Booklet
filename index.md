@@ -136,7 +136,7 @@ Kot uporaben primer lahko vzamemo pretvornik enot. Kot že veste naš merski sis
 program {
     kilo: 1000;
     foot: 0.3048;
-	mile: 5280 * foot;
+    mile: 5280 * foot;
     inch: foot / 12;
     
     n: 100;
