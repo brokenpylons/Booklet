@@ -143,7 +143,7 @@ program {
     print n " m" line;
     print n / kilo " km" line;
     print n / foot " ft" line;
-	print n / mile " mi" line;
+    print n / mile " mi" line;
     print n / inch " in" line;
 }
 ```
