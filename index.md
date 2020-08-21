@@ -380,9 +380,63 @@ program {
 }
 ```
 
-Kot lahko vidimo v primeru, da vnesemo število ```0``` se telo zanke izvede neskončno krat v nasprotnem primeru pa se ne zgodi nič.
+Kot lahko vidimo v primeru, da vnesemo število ```0``` se telo zanke izvede neskončno krat v nasprotnem primeru pa se ne zgodi nič. Program, ki samo izpisuje neko sporočilo v neskončnost ni preveč uporaben. Spomnimo se, da lahko vrednost spremenljivke spremenimo, torej lahko dosežemo, da se zanka enkrat zaključi:
 
+```
+program {
+    print "x = ";
+    x: input;
+    while (x = 0) {
+        print "x je nič!" line;
+        print "x = ";
+        x: input;
+    }
+}
+```
 
+Na tak način lahko implementiramo program za ugibanje najljubšega števila:
 
+```
+program {
+    n: 7;
+    print "x = ";
+    x: input;
+    while (x /= n) {
+        print "narobe!" line;
+        print "x = ";
+        x: input;
+    }
+    print "uganil!" line;
+}
+```
+
+V poglavju spremnljivke smo predstavili števec, kaj se zgodi če ga uporabimo v zanki? Program izpiše vsa števila od ```1``` do ```n```.
+ 
+```
+program {
+    n: input;
+    x: 0;
+    while (x <= n) {
+        print x line;
+        x: x + 1;
+    }
+}
+```
+
+Števila lahko tudi seštejemo:
+ 
+```
+program {
+    n: input;
+    x: 0;
+    vsota: 0;
+    while (x <= n) {
+        print x line;
+        x: x + 1;
+        vsota: vsota + x;
+    }
+    print "Vsota: " vsota line;
+}
+```
 
 ## Kam naprej?
