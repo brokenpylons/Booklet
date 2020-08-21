@@ -120,6 +120,33 @@ program {
 
 Ta progam si najprej število shrani, nato pa ga izpiše na zaslon. Vedno, ko nas zanima kaj ima računalnik shranjeno v spominu na določeni točki v programu lahko vrednost vedno izpišemo na zaslon in pogledamo.
 
+Poleg števil samih pa lahko shranimo v spremenljivko tudi rezultat matematičnega izraza. Tako lahko dele izračuna ponovno uporabimo.
+```
+program {
+    x: 10 * (99 - 0.5);
+    y: 7 * x;
+    print "x = " x line;
+    print "y = " y line;
+}
+```
+
+Kot uporaben primer lahko vzamemo pretvornik enot. Kot že veste naš merski sistem temelji na večkratnikih števila dest, npr. metre lahko v kilometre pretvorimo tako da delimo z ```10^3```. V Ameriki so ohranili dokaj nenavaden sistem, ker med sosednjimi enotami ni nekega smiselnega razmerja. Za merjenje razdalje uporabljajo kot osnovno enoto korak, ki je nekje tretina metra, nato pa sta iz nje izpeljani npr. inč, ki je dvanajstina koraka in milja, ki je točno 5280 korakov. Sto metrov lahko v različne enote pretvorimo s spodnjim programom, razmerja med enotami lahko izračunamo v naprej in jih shranimo v spremenljivke.
+
+```
+program {
+    kilo: 1000;
+    foot: 0.3048;
+	mile: 5280 * foot;
+    inch: foot / 12;
+    
+    n: 100;
+    print n " m" line;
+    print n / kilo " km" line;
+    print n / foot " ft" line;
+	print n / mile " mi" line;
+    print n / inch " in" line;
+}
+```
 
 ## Vhod in izhod
 
