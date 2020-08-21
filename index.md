@@ -351,23 +351,6 @@ program {
 }
 ```
 
-Z uporabo logičnih operatorjev bi lahko zgoren program zapisali tudi tako:
-
-```
-program {
-    x: input;
-    if (x < 0) {
-        print "x je negativen"; 
-    }
-    if (not (x < 0) and x > 0) {
-        print "x je pozitiven"; 
-    }
-    if ((not (x < 0)) and (not (x > 0))) {
-        print "x je enak nič";
-    }
-}
-```
-
 ## Zanke
 Zanke so podobne vejitvam, le da se trditev izvaja dokler je pogoj resničen. Predstavimo jih s trditvijo ```while```. Vzamimo prvi primer iz prejšnjega poglavja in zamenjajmo ```if``` z ```while```.
 
