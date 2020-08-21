@@ -160,6 +160,7 @@ program {
 ```
 
 V izrazu lahko uporabimo tudi spremenljivko samo, torej uporabimo njeno prejšnjo vrednost. Na takšen način lahko implementirano števec:
+
 ```
 program {
     x: 0;
@@ -177,6 +178,44 @@ program {
 
 ## Vhod in izhod
 
+Do sedaj smo vrednosti samo izpisovali, lahko pa jih tudi preberemo. Na takšen način uporabniku našega programa omogočimo da v program vstavi svojo vrednost.
+Najpreprostejši tak program prebere vrednost in jo tako izpiše na zaslon:
+
+```
+program {
+    x: input;
+    print x;
+}
+```
+
+Tak program lahko nato nadgradimo, tako da izpišemo še predhodnika in naslednjika števila.
+
+```
+program {
+    x: input;
+    print "Predhodnik: " x - 1 line;
+    print "Število: " x line;
+    print "Naslednik: " x + 1 line;   
+}
+```
+
+Na podoben način lahko nadgradimo tudi naš pretvornik enot, tako da lahko uporabnik sam vnese število:
+
+```
+program {
+    kilo: 1000;
+    foot: 0.3048;
+    mile: 5280 * foot;
+    inch: foot / 12;
+    
+    n: input;
+    print n " m" line;
+    print n / kilo " km" line;
+    print n / foot " ft" line;
+    print n / mile " mi" line;
+    print n / inch " in" line;
+}
+```
 
 ## Pogoji
 
