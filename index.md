@@ -228,10 +228,161 @@ program {
 ```
 
 ## Vejitve
-Vejitve nam omogočajo, da se lahko računalnik odloči kaj bo storil, glede na vrednost negega pogoja.
+Vejitve nam omogočajo, da se lahko računalnik odloči kaj bo storil, glede na to ali je nek pogoj resničen ali ne-resničen. Vejitve predstavimo s trditvijo ```if```. Kot preprost pogoj vzamimo ```x``` je enako nič (```x = 0```). Računalnik pri spodnjem programu izpiše sporočilo samo, *če* je pogoj resničen. Z drugimi besedami telo trditve ```if``` (ukazi med ```{``` in ```}```) se izvedejo le *če* je pogoj resničen, drugače se ne zgodi nič.
 
+```
+program {
+    x: input;
+    if (x = 0) {
+        print "x je nič!"; 
+    }
+}
+```
+
+Če želimo, da program nekaj izpiše v primeru da zgoren pogoj *ni* resničen to storimo da dodamo še trditev ```else``` (ki pomeni sicer):
+
+```
+program {
+    x: input;
+    if (x = 0) {
+        print "x je nič!"; 
+    }
+    else {
+        print "x ni nič :("; 
+    }
+}
+```
+
+### Logični operatorji
+Logični operatorji nam omogočajo, da različne trditve kombiniramo. Osnovi trije so konjunkcija (```and```), disjunkcija (```or```) in negacija (```not```). Ti operatorji so podobni klasičnim matematičnim operacijam (seštevanje, množenje), ki jih že poznamo, razlikujejo se v tem, da delujejo nad logočnimi vrednostmi, ki sta *res* in *ni res*.
+
+#### Konjunkcija
+Operator nam omogoča da preverimo ali sta hkrati resnična oba pogoja, torej če je resničen prvi pogoj *in* če je hkrati resničen drugi pogoj. Npr. če želimo, da program nekaj izpiše v primeru, da je vrednost med nekima dvema vrednostima, lahko najprej preverimo če je naša vrednost hkrati večja od prve *in* manjša od druge. Pri spodnjem programu pogoj preberemo kot "če je vrednost večja od ```5``` in če je vrednost manjša od ```10```", kar pomeni da je med ```5``` in ```10```: 
+
+```
+program {
+    x: input;
+    if (5 <= x and x <= 10) {
+        print "x je med 5 in 10"; 
+    }
+}
+```
+
+Na operator ```and``` lahko gledamo tudi kot na presek množic. Množica vseh števil večjih od ```5``` je enaka ```{5, 6, 7, 8, 9, 10, 11, ...}``` in množica vseh števil manjših od ```10``` je enaka ```{..., 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}```, torej je njun presek je ravno ```{5, 6, 7, 8, 9, 10}```. Spročilo izpiše le če je naše število eno od prej naštetih.
+
+#### Disjunkcija
+Operator nam omogoča, da preverimo ali je resničen prvi *ali* drugi pogoj. Npr. če želimo preveriti ali je vrednost enaka ```1``` *ali* ```2``` lahko to storimo tako:
+
+```
+program {
+    x: input;
+    if (x = 1 or x = 2) {
+        print "x je enak 1 ali 2"; 
+    }
+}
+```
+
+Iz vidika množic operator ```or``` predstavlja unijo. Množica števil, ki so enaka ```1``` je ```{1}``` in množica števil, ki so enaka ```2``` je ```{2}```, torej je njuna unija ```{1, 2}```, program bo nekaj izpisal le, če je naše število eno od naštetih tako kot prej.
+
+#### Negacija
+Tretja operacija je operacija ```not```, ki vrednost pogoja obrne, torej če je bil pogoj resničen ta postane ne-resničen in obratno. Z operacijo ```not``` lahko nadomestimo trditev ```else```:
+
+```
+program {
+    x: input;
+    if (x = 0) {
+        print "x je nič!"; 
+    }
+    if (not (x = 0)) {
+        print "x ni nič :("; 
+    }
+}
+```
+
+Oz. izpišemo nekaj le če število ni enako nič:
+
+```
+program {
+    x: input;
+    if (not (x = 0)) {
+        print "x ni nič!"; 
+    }
+}
+```
+
+Iz vidika množic operacija ```not``` predstavlja kompliment, torej množico vseh števil ki so enake ```0```, ```{0}```,  spremeni v ```{..., -2, -1, 1, 2, ...}```, torej v množico vseh števil, razen ```0```.
+
+### Veriženje
+
+Več pogojnih trditev lahko verižimo eno za drugo. Torej če želimo preveriti ali je število pozitivno, negativno ali nič (ki ni ne negativno in ne pozitivno) lahko to storimo takole:
+
+```
+program {
+    x: input;
+    if (x < 0) {
+        print "x je negativen"; 
+    }
+    else if (x > 0) {
+        print "x je pozitiven"; 
+    }
+    else {
+        print "x je enak nič"; 
+    }
+}
+```
+Torej če imamo množico celih števil ```{..., -2, -1, 0, 1, 2, ...}``` prvi pogoj zajame vrednosti, ki so manjše od nič (negativne), ```{..., -2, -1}```, ostane nam ```{0, 1, 2, ...}```. Drugi pogoj zajame vrednosti večje od nič (pozitivne) ```{ 1, 2, ...}```. Na koncu pa nam ostane še samo ```{0}```, torej nič.
+
+Zgoren program je kraša oblika tega, kombinirana trditev ```else if``` nam omogoča, da se izognemu gnezednju.
+
+```
+program {
+    x: input;
+    if (x < 0) {
+        print "x je negativen"; 
+    }
+    else {
+        if (x > 0) {
+            print "x je pozitiven"; 
+        }
+        else {
+            print "x je enak nič"; 
+        }
+    }
+}
+```
+
+Z uporabo logičnih operatorjev bi lahko zgoren program zapisali tudi tako:
+
+```
+program {
+    x: input;
+    if (x < 0) {
+        print "x je negativen"; 
+    }
+    if (not (x < 0) and x > 0) {
+        print "x je pozitiven"; 
+    }
+    if ((not (x < 0)) and (not (x > 0))) {
+        print "x je enak nič";
+    }
+}
+```
 
 ## Zanke
+Zanke so podobne vejitvam, le da se trditev izvaja dokler je pogoj resničen. Predstavimo jih s trditvijo ```while```. Vzamimo prvi primer iz prejšnjega poglavja in zamenjajmo ```if``` z ```while```.
+
+```
+program {
+    x: input;
+    while (x = 0) {
+        print "x je nič!"; 
+    }
+}
+```
+
+Kot lahko vidimo v primeru, da vnesemo število ```0``` se telo zanke izvede neskončno krat v nasprotnem primeru pa se ne zgodi nič.
+
+
 
 
 ## Kam naprej?
