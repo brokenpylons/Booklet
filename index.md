@@ -13,7 +13,7 @@ program {
 }
 ```
 
-Ta program predstavlja postopek brez enega samega koraka, zato posledično ne naredi ničesar. To je najpreprostejši program, ki ga lahko zapišemo. Takšen porgram ni preveč uporaben, zato mu dodajmo še kakšen ukaz. Dodali bomo ukaz za izpis na zaslon, ki se imenuje ```print```. Zakaj se imenuje print? Ker so prvi računalniki imeli namesto zalona tiskalnik, računalnik je v tistih časih začel dobesedno "printati", ko je dobil ta ukaz. To ime je torej izbrano zgolj iz konvencije. Zraven ukaza print pa je še besedilo, ki ga bo program izpisal na zaslon. V primeru naslednega programa je to ```Zdravo!```:
+Ta program predstavlja postopek brez enega samega koraka, zato posledično ne naredi ničesar. To je najpreprostejši program, ki ga lahko zapišemo. Takšen porgram ni preveč uporaben, zato mu dodajmo še kakšen ukaz. Dodali bomo ukaz za izpis na zaslon, ki se imenuje ```print```. Zakaj se imenuje print? Ker so prvi računalniki imeli namesto zalona tiskalnik, računalnik je v tistih časih začel dobesedno "printati", ko je dobil ta ukaz. Zraven ukaza print pa je še besedilo, ki ga bo program izpisal na zaslon. V primeru naslednega programa je to ```Zdravo!```:
 
 ```
 program {
@@ -48,18 +48,12 @@ Kot lahko vidite so programi nekakšen kuharski recept za računalnik. Sestavlje
 
 ```
 program {
-    print "Vzami posodo.";
-    print line;
-    print "Dodaj jajca.";
-    print line;
-    print "Dodaj moko.";
-    print line;
-    print "Dodaj mleko.";
-    print line;
-    print "Maso vlij v ponev.";
-    print line;
-    print "Speči palačinke!";
-    print line;
+    print "Vzami posodo." line;
+    print "Dodaj jajca." line;
+    print "Dodaj moko." line;
+    print "Dodaj mleko." line;
+    print "Maso vlij v ponev." line;
+    print "Speči palačinke!" line;
 }
 ```
 
@@ -73,7 +67,7 @@ program {
 }
 ```
 
-Sem uganil? ;) Podprta so samo cela števila. Torej računalnik števila ```1.4``` ne bo razumel. Z števili pa lahko tudi računamo. Na primer računalniku lahko damo za nalogo naj izračuna ```1 + 1```:
+Sem uganil? ;) Z števili pa lahko tudi računamo. Na primer računalniku lahko damo za nalogo naj izračuna ```1 + 1```:
 
 ```
 program {
@@ -81,26 +75,27 @@ program {
 }
 ```
 
-Odgovor je seveda ```2```. Podprte pa so tudi druge računske operacije. Na voljo imamo seštevanje, odštevanje, deljenje in množenje. 
+Odgovor je seveda ```2```. Podprte pa so tudi druge računske operacije. Na voljo imamo seštevanje, odštevanje, množenje, deljenje in deljenje celih števil. 
 
 ```
 program {
-    print 1 + 2;
-    print 1 - 2;
-    print 1 * 2;
-    print 1 / 2;
+    print 1 + 2 line;
+    print 1 - 2 line;
+    print 1 * 2 line;
+    print 1 / 2 line;
+    print 1 // 2 line;
 }
 ```
 
 
-Računalnik je torej kot neke vrste kalukator. Lahko izračuna poljubne račune, za razliko od kalukatorja pa lahko izračuna zaporedoma več računov ne le enega. Opazite lahko, da je računalnik pri zadnjem izračunu vrnil ```0```. Se je morda zmotil? Kot sem že omenil so podprta samo cela števila, zato v primeru kot števili nista deljivi računalnik rezultat zaokroži navzdol. To pomeni da preprosto odstranimo del za decimalno vejico, na primer ```1.3``` se zaokroži na ```1```, ```1.5``` se prav tako zaokroži na ```1```, ```7.6``` se zaokroži na ```7```, ```9.9``` se zaokorži na ```9```. Seveda pa računalnik lahko računa tudi z večjimi števili. Brez težav opravi z naslednjimi računi za katere bi mi že potrebovali kalkulator:
+Računalnik je torej kot neke vrste kalukator. Lahko izračuna poljubne račune, za razliko od kalukatorja pa lahko izračuna zaporedoma več računov ne le enega. Opazite lahko, da je računalnik pri zadnjem izračunu vrnil ```0```. V primeru, da želimo da je rezultat deljenja celo število mora računalnik rezultat zaokroži navzdol. To pomeni da preprosto odstrani del za decimalno vejico, na primer ```1.3``` se zaokroži na ```1```, ```1.5``` se prav tako zaokroži na ```1```, ```7.6``` se zaokroži na ```7```, ```9.9``` se zaokorži na ```9```. Seveda pa računalnik lahko računa tudi z večjimi števili. Brez težav opravi z naslednjimi računi za katere bi mi že potrebovali kalkulator:
 
 ```
 program {
-    print 502 + 78;
-    print 78858 - 4485;
-    print 1147 * 99;
-    print 77888 / 222;
+    print 502 + 78 line;
+    print 78858 - 4485 line;
+    print 1147 * 99 line;
+    print 77888 / 222 line;
 }
 ```
 
