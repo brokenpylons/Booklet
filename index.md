@@ -410,27 +410,25 @@ program {
 }
 ```
 
-V poglavju spremnljivke smo predstavili števec, kaj se zgodi če ga uporabimo v zanki? Program izpiše vsa števila od ```1``` do ```n```.
+V poglavju spremnljivke smo predstavili števec, kaj se zgodi če ga uporabimo v zanki? Program izpiše vsa števila od ```0``` do ```10```.
  
 ```
 program {
-    n: input;
     x: 0;
-    while (x <= n) {
+    while (x <= 10) {
         print x line;
         x: x + 1;
     }
 }
 ```
 
-Števila lahko tudi seštejemo:
+Vsa števila od ```0``` do ```10``` lahko tudi seštejemo na podoben način, le da sedaj prištevamo ```x``` namesto ```1```. 
  
 ```
 program {
-    n: input;
     x: 0;
     vsota: 0;
-    while (x <= n) {
+    while (x <= 10) {
         print x line;
         x: x + 1;
         vsota: vsota + x;
@@ -440,3 +438,9 @@ program {
 ```
 
 ## Kam naprej?
+Naš jezik je seveda preveč omejen za razvoj večjih aplikacij. Pot lahko nadaljujete, tako da se naučite še kakšnega drugega jezika. Kot boste videli je povsod začetni del popolmoma enak temu kar ste se ravnokar naučili.
+
+- [Python](https://docs.python.org/3/tutorial/)
+- [Haskell](http://learnyouahaskell.com/chapters)
+- [Scheme](http://www.shido.info/lisp/idx_scm_e.html)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
