@@ -31,7 +31,7 @@ program {
 }
 ```
 
-Kot ste opazili je računalnik vsa besedila izpisal kar v eni vrstici. Takšen izpis ne izgleda preveč pregledno. Dajmo vsako besedilo v svojo vrstico! To naredimo tako, da za vsakim besedilom izpišemo še znak za novo vrstico. Tega predstavlja besedica ```line```.
+Kot ste opazili je računalnik vsa besedila izpisal kar v eni vrstici. Takšen izpis ne izgleda preveč pregledno. Dajmo vsako besedilo v svojo vrstico! To naredimo tako, da za vsakim besedilom izpišemo še novo vrstico z uporabo ukaza ```line```.
 
 ```
 program {
@@ -44,7 +44,7 @@ program {
 }
 ```
 
-Kot lahko vidite so programi nekakšen kuharski recept za računalnik. Sestavljen je iz večih korakov, ti pa se vedno izvajajo eden za drugim od vrha do dna. Naslednji program izpiše recept za peko palačink!
+Kot lahko vidite so programi nekakšen kuharski recept za računalnik. Sestavljen je iz večih korakov, ti pa se vedno izvajajo eden za drugim od vrha do dna. Naslednji program izpiše recept za peko palačink! Kot lahko vidimo lahko izpis nove vrstice
 
 ```
 program {
@@ -101,7 +101,7 @@ program {
 
 ## Spremenljivke
 
-Računalnik ima tudi spomin kamor lahko shranimo števila. Mesto kamor si je računalnik število shranil moramo nekako označiti, da bomo število lahko kasneje dobili nazaj. To storimo tako da mu mestu dodelimo ime, lahko je karkoli, vendar je najbolje da izbiramo imena, ki nas spomnijo kaj smo tja shranili. Na primer:
+Računalnik ima tudi spomin kamor lahko shranimo števila. Mesto kamor si je računalnik število shranil moramo nekako označiti, da bomo število lahko kasneje dobili nazaj. To storimo tako da mu mestu dodelimo ime, lahko je karkoli, vendar je najbolje da izbiramo imena, ki nas spomnijo kaj smo tja shranili. Temu imenu rečemo spremenljivka. Na primer:
 
 ```
 program {
@@ -145,6 +145,33 @@ program {
     print n / foot " ft" line;
     print n / mile " mi" line;
     print n / inch " in" line;
+}
+```
+
+Vrednost spremenljivke pa lahko tudi *spremenimo*, torej ji dodelimo neko drugo vrednost. V spodnjem programu je vrednost ```x``` najprej ```1```, nato pa jo spremenimo na ```2```.
+
+```
+program {
+    x: 1;
+    print x line;
+    x: 2;
+    print x line;
+}
+```
+
+V izrazu lahko uporabimo tudi spremenljivko samo, torej uporabimo njeno prejšnjo vrednost. Na takšen način lahko implementirano števec:
+```
+program {
+    x: 0;
+    print x line;
+    x: x + 1;
+    print x line;
+    x: x + 1;
+    print x line;
+    x: x + 1;
+    print x line;
+    x: x + 1;
+    print x line;
 }
 ```
 
