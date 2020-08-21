@@ -217,7 +217,18 @@ program {
 }
 ```
 
-## Pogoji
+Uporabinik lahko seveda vnese tudi več števil, naslednji program prebere dve števili in izpiše njuno vsoto:
+
+```
+program {
+    x: input;
+    y: input;
+    print x + y;
+}
+```
+
+## Vejitve
+Vejitve nam omogočajo, da se lahko računalnik odloči kaj bo storil, glede na vrednost negega pogoja.
 
 
 ## Zanke
