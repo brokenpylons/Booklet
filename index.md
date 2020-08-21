@@ -332,7 +332,7 @@ program {
 ```
 Torej če imamo množico celih števil ```{..., -2, -1, 0, 1, 2, ...}``` prvi pogoj zajame vrednosti, ki so manjše od nič (negativne), ```{..., -2, -1}```, ostane nam ```{0, 1, 2, ...}```. Drugi pogoj zajame vrednosti večje od nič (pozitivne) ```{ 1, 2, ...}```. Na koncu pa nam ostane še samo ```{0}```, torej nič.
 
-Zgoren program je kraša oblika tega, kombinirana trditev ```else if``` nam omogoča, da se izognemu gnezednju.
+Zgoren program je kraša oblika tega, kombinirana trditev ```else if``` nam omogoča, da se izognemu gnezdenju.
 
 ```
 program {
